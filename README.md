@@ -1,5 +1,17 @@
 # 🧠 LifeDialBench: Evaluating Memory Capability in Continuous Lifelog Scenarios
 
+<p align="center">
+  <img src="assets/logo.png" alt="RayNeo Logo" width="160" />
+</p>
+
+<p align="center">
+  <a href="[YOUR_ARXIV_LINK]"><img src="https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv" /></a>
+  <a href="https://github.com/qys77714/LifeDialBench"><img src="https://img.shields.io/badge/GitHub-Code-black?logo=github" /></a>
+  <img src="https://img.shields.io/badge/Dataset-Coming%20Soon-orange" />
+  <img src="https://img.shields.io/badge/Code-Coming%20Soon-yellow" />
+  <img src="https://img.shields.io/badge/License-MIT-blue" />
+</p>
+
 > **Evaluating Memory Capability in Continuous Lifelog Scenario**  
 > Jianjie Zheng, Zhichen Liu, Zhanyu Shen, Jingxiang Qu, Guanhua Chen†, Yile Wang, Yang Xu, Yang Liu, Sijie Cheng†  
 > Southern University of Science and Technology · RayNeo.AI · Tsinghua University · Shenzhen University · Shanghai Jiao Tong University  
