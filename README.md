@@ -13,9 +13,9 @@
 </p>
 
 > **Evaluating Memory Capability in Continuous Lifelog Scenario**  
-> Jianjie Zheng, Zhichen Liu, Zhanyu Shen, Jingxiang Qu, Guanhua Chen†, Yile Wang, Yang Xu, Yang Liu, Sijie Cheng†  
+> Jianjie Zheng*, Zhichen Liu*, Zhanyu Shen, Jingxiang Qu, Guanhua Chen†, Yile Wang, Yang Xu, Yang Liu, Sijie Cheng†  
 > Southern University of Science and Technology · RayNeo.AI · Tsinghua University · Shenzhen University · Shanghai Jiao Tong University  
-> ( Equal contribution. † Corresponding authors.)
+> (* Equal contribution. † Corresponding authors.)
 
 ---
 
