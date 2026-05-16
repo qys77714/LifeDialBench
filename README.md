@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2604.11182"><img src="https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv" /></a>
-  <img src="https://img.shields.io/badge/Dataset-Coming%20Soon-orange" />
+  <img src="https://img.shields.io/badge/Dataset-In%20Repo-green" />
   <img src="https://img.shields.io/badge/License-MIT-blue" />
 </p>
 
@@ -17,10 +17,12 @@
 
 ---
 
-## 🚧 Coming Soon
+## 📦 What’s in this repo
 
-> The **LifeDialBench dataset** (EgoMem & LifeMem subsets), evaluation scripts, and baseline implementations will be released upon paper acceptance.  
-> Please ⭐ **star this repo** to stay updated!
+- **`data/`** — Released benchmark JSON for **EgoMem** and **LifeMem** (see [Dataset](#dataset)).
+- **Evaluation scripts & baselines** — Still 🚧 **coming soon** (will be added alongside clearer run instructions).
+
+Please ⭐ **star this repo** for updates.
 
 ---
 
@@ -62,11 +64,40 @@ Our experiments reveal a **counterintuitive result**: over-designed memory struc
 
 ---
 
+<a id="dataset"></a>
+
 ## 📂 Dataset
 
-> 🚧 **Coming Soon** — will be released upon paper acceptance.
+The released files live under **`data/`**:
 
-The benchmark will include:
+| File            | Subset   | Lifelog sessions | Multiple-choice QA items |
+| --------------- | -------- | ---------------- | ------------------------ |
+| `data/EgoMem.json`  | **EgoMem**  | 6                | 939                      |
+| `data/LifeMem.json` | **LifeMem** | 1                | 1,717                    |
+
+Each file is a **JSON array** of lifelog sessions. One session has:
+
+| Field            | Description |
+| ---------------- | ----------- |
+| `history_name`   | Identifier for the lifelog / protagonist viewpoint. |
+| `chat_time`      | List of timestamps aligned with streaming chunks in `chat_history`. |
+| `chat_history`   | Temporally ordered dialogue: a list of **chunks**, each chunk a list of `{ "speaker", "content" }` utterances. |
+| `qa`             | Evaluation items for that session (see below). |
+
+Each **`qa`** object contains:
+
+| Field            | Description |
+| ---------------- | ----------- |
+| `question`       | Multiple-choice question text. |
+| `options`        | Four strings `"A. …"` … `"D. …"`. |
+| `golden_option`  | Correct letter (`"A"`–`"D"`). |
+| `answer`         | Short gold answer string (optional helper for scoring/display). |
+| `question_time`  | When the question is posed in the online protocol (date string). |
+| `question_type`  | One of `single_event`, `event_detail`, `multi_event`, `time_query`. |
+| `evidence_date`  | Supporting evidence window / date hint for the answer. |
+| `timescale`      | Granularity label for evidence (e.g. `10min`, `day`). |
+
+Background on subsets:
 
 
 | Subset      | Source                                | Setting                                |
@@ -79,15 +110,18 @@ The benchmark will include:
 
 ## 🚀 Getting Started
 
-> 🚧 Code and evaluation scripts are coming soon.
-
 ```bash
 # Clone the repository
 git clone https://github.com/qys77714/LifeDialBench.git
 cd LifeDialBench
 ```
 
-Requirements and setup instructions will be provided upon release.
+After cloning, load the benchmark from:
+
+- `data/EgoMem.json`
+- `data/LifeMem.json`
+
+Evaluation code and dependency versions will be documented when the scoring pipeline is published.
 
 ---
 
@@ -95,7 +129,7 @@ Requirements and setup instructions will be provided upon release.
 
 We provide an **Online Evaluation Protocol** that simulates a streaming, temporally-ordered inference setting — in contrast to traditional offline protocols which risk temporal leakage.
 
-Evaluation scripts and detailed instructions will be released alongside the dataset.
+Automated evaluation scripts will be added to this repository in a future update; the dataset JSON above matches that protocol’s fields (`chat_time`, `chat_history`, `qa`, etc.).
 
 ---
 
