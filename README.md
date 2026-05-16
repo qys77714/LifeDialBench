@@ -70,11 +70,6 @@ Our experiments reveal a **counterintuitive result**: over-designed memory struc
 
 The released files live under **`data/`**:
 
-| File            | Subset   | Lifelog sessions | Multiple-choice QA items |
-| --------------- | -------- | ---------------- | ------------------------ |
-| `data/EgoMem.json`  | **EgoMem**  | 6                | 939                      |
-| `data/LifeMem.json` | **LifeMem** | 1                | 1,717                    |
-
 Each file is a **JSON array** of lifelog sessions. One session has:
 
 | Field            | Description |
